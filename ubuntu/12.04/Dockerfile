@@ -1,5 +1,4 @@
-FROM ubuntu:14.04
-# FROM ubuntu-upstart:14.04
+FROM ubuntu:12.04.5
 
 # MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
