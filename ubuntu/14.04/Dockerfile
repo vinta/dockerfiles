@@ -5,8 +5,7 @@ FROM ubuntu:14.04.1
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sed -i 's,us.archive,tw.archive,g' /etc/apt/sources.list && \
-    sed -i 's,http://archive,http://tw.archive,g' /etc/apt/sources.list
+RUN sed -i 's,http://archive.ubuntu.com/,http://free.nchc.org.tw/,g' /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y \
     htop \
