@@ -7,5 +7,6 @@ RUN apt-get install -y \
     python-pip
 
 RUN pip install pip --upgrade
+RUN pip install ipdb ipython uniout
 
 CMD ["bash"]
