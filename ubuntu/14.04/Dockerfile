@@ -10,4 +10,6 @@ RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
+RUN echo Asia/Taipei > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+
 CMD ["bash"]
