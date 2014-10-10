@@ -9,13 +9,15 @@ MYSQL_PASSWORD=${MYSQL_PASSWORD:-""}
 
 VOLUME_HOME="/var/lib/mysql"
 
-# rm -rf /var/lib/mysql/*
-# mkdir -p -m 700 /var/lib/mysql
-
 chmod -R 700 $VOLUME_HOME
 chown -R mysql:mysql $VOLUME_HOME
 
 if [[ ! -d $VOLUME_HOME/mysql ]]; then
+    if [ -z "$MYSQL_ROOT_PASSWORD" ]; then
+        echo "You need to add \`-e MYSQL_ROOT_PASSWORD=YOUR_PASS\` to run this container"
+        exit 1
+    fi
+
     echo "Initializing MySQL..."
     mysql_install_db --user=mysql --datadir=$VOLUME_HOME
 
