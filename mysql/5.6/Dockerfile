@@ -3,11 +3,12 @@ FROM vinta/ubuntu:14.04
 MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
 RUN apt-get update && apt-get install -y \
-    mysql-server-5.5
+    mysql-server-5.6
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 COPY my.cnf /etc/mysql/
+
 COPY run.sh /
 RUN chmod +x /run.sh
 
