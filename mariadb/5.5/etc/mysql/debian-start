@@ -21,8 +21,11 @@ MYCHECK_RCPT="root"
 # If you want to disable the check for crashed tables comment
 # "check_for_crashed_tables" out.  
 # (There may be no output to stdout inside the background process!)
-echo "Checking for tables which need an upgrade, are corrupt or were "
-echo "not closed cleanly."
+echo "Checking for corrupt, not cleanly closed and upgrade needing tables."
+
+# Need to ignore SIGHUP, as otherwise a SIGHUP can sometimes abort the upgrade
+# process in the middle.
+trap "" SIGHUP
 (
   upgrade_system_tables_if_necessary;
   check_root_accounts;
