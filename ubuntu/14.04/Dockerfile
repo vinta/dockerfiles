@@ -8,7 +8,8 @@ RUN sed -i 's,http://archive.ubuntu.com/,http://tw.archive.ubuntu.com/,g' /etc/a
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-RUN echo Asia/Taipei > /etc/timezone && dpkg-reconfigure tzdata
+RUN echo Asia/Taipei > /etc/timezone && \
+    dpkg-reconfigure tzdata
 
 ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8" \
