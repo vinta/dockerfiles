@@ -4,7 +4,8 @@ MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sed -i 's,http://archive.ubuntu.com/,http://tw.archive.ubuntu.com/,g' /etc/apt/sources.list
+# RUN sed -i 's,http://archive.ubuntu.com/,http://tw.archive.ubuntu.com/,g' /etc/apt/sources.list
+COPY sources.list /etc/apt/
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
