@@ -12,8 +12,9 @@ ENV LANG=en_US.UTF-8
 # RUN sed -i 's,//archive.ubuntu.com,//tw.archive.ubuntu.com,g' /etc/apt/sources.list
 COPY sources.list /etc/apt/
 
-RUN apt-get update && \
-    apt-get install -y python-dev python-pip && \
+RUN add-apt-repository -y ppa:saltstack/salt && \
+    apt-get update && \
+    apt-get install -y python-dev python-pip ssh && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 RUN pip install ipdb
