@@ -3,6 +3,7 @@ FROM ubuntu:14.04.2
 MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV TERM xterm
 
 RUN locale-gen en_US.UTF-8 && \
     update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
