@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.2
+FROM ubuntu:14.04.3
 
 MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
