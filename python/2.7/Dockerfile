@@ -8,8 +8,3 @@ RUN apt-get update && \
     python-dev \
     python-pip && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
-
-RUN pip install pip --upgrade
-RUN pip install ipdb ipython
-
-CMD ["python"]
