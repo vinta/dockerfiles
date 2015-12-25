@@ -15,4 +15,9 @@ RUN echo Asia/Taipei > /etc/timezone && \
 
 COPY sources.list /etc/apt/
 
-RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y \
+    python-apt \
+    python-software-properties \
+    software-properties-common && \
+    rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
