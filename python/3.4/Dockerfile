@@ -10,7 +10,4 @@ RUN apt-get update && \
     python3-pip && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-RUN pip3 install pip --upgrade
-RUN pip3 install ipdb ipython
-
-CMD ["python3"]
+RUN ln -sf /usr/bin/python3 /usr/bin/python
