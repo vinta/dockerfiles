@@ -5,6 +5,8 @@ MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 RUN apt-get update && \
     apt-get install -Vy \
     -o APT::Install-Recommends=false -o APT::Install-Suggests=false \
+    libffi-dev \
+    libssl-dev \
     python3.4 \
     python3.4-dev \
     python3-pip && \
