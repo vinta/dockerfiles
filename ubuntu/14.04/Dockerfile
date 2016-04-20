@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.3
+FROM ubuntu:14.04.4
 
 MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
@@ -16,7 +16,7 @@ RUN echo Asia/Taipei > /etc/timezone && \
 COPY sources.list /etc/apt/
 
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -Vy \
     python-apt \
     python-software-properties \
     software-properties-common && \
