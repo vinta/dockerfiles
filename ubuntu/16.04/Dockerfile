@@ -21,3 +21,5 @@ RUN apt-get update && \
     python3-software-properties \
     software-properties-common && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+
+CMD ["/bin/bash"]
