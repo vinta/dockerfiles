@@ -9,7 +9,8 @@ RUN apt-get update && \
     libssl-dev \
     python3.5 \
     python3.5-dev \
-    python3-pip && \
+    python3-pip \
+    python3-setuptools && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 RUN ln -sf /usr/bin/python3 /usr/bin/python && \
