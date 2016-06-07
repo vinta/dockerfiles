@@ -17,7 +17,9 @@ COPY sources.list /etc/apt/
 
 RUN apt-get update && \
     apt-get install -Vy \
+    curl \
     python-apt \
     python-software-properties \
-    software-properties-common && \
+    software-properties-common \
+    wget && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
