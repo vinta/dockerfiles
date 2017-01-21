@@ -10,3 +10,7 @@ RUN apt-get update && \
     python-dev \
     python-pip && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+
+RUN pip install wheel
+
+CMD ["python"]
