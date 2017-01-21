@@ -45,16 +45,12 @@ innodb-flush-log-at-trx-commit = 1
 innodb-file-per-table          = 1
 innodb-buffer-pool-size        = 2G
 
-# LOGGING #
-log-error                      = /var/lib/mysql/mysql-error.log
-log-queries-not-using-indexes  = 1
-slow-query-log                 = 1
-slow-query-log-file            = /var/lib/mysql/mysql-slow.log
-
+bind-address                   = 0.0.0.0
+binlog-format                  = ROW
 character-set-server           = utf8
 collation-server               = utf8_unicode_ci
-character-set-server           = utf8
-collation_server               = utf8_unicode_ci
+server-id                      = mysql
+transaction-isolation          = READ-COMMITTED
 
 [client]
 
