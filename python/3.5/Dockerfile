@@ -16,4 +16,6 @@ RUN apt-get update && \
 RUN ln -sf /usr/bin/python3 /usr/bin/python && \
     ln -sf /usr/bin/pip3 /usr/bin/pip
 
+RUN pip install wheel
+
 CMD ["python"]
