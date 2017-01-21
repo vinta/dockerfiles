@@ -7,6 +7,8 @@
 port                           = 3306
 socket                         = /var/lib/mysql/mysql.sock
 
+default-character-set          = utf8
+
 [mysqld]
 
 # GENERAL #
@@ -48,6 +50,7 @@ innodb-buffer-pool-size        = 2G
 
 bind-address                   = 0.0.0.0
 binlog-format                  = ROW
+character-set-client-handshake = FALSE
 character-set-server           = utf8
 collation-server               = utf8_unicode_ci
 server-id                      = mysql
@@ -55,4 +58,4 @@ transaction-isolation          = READ-COMMITTED
 
 [client]
 
-default-character-set = utf8
+default-character-set          = utf8
