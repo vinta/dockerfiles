@@ -14,6 +14,7 @@ RUN apt-get update && \
     python3-apt \
     python3-software-properties \
     software-properties-common \
+    tzdata \
     wget && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
