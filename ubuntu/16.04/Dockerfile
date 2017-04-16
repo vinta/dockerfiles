@@ -22,7 +22,8 @@ RUN locale-gen en_US.UTF-8 && \
 
 ENV LANG=en_US.UTF-8
 
-RUN echo Asia/Taipei > /etc/timezone && \
-    dpkg-reconfigure tzdata
+RUN echo "Asia/Taipei" > /etc/timezone && \
+    ln -fs /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
 
 CMD ["/bin/bash"]
