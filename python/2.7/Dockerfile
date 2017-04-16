@@ -5,6 +5,7 @@ MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 RUN apt-get update && \
     apt-get install -Vy \
     -o APT::Install-Recommends=false -o APT::Install-Suggests=false \
+    build-essential \
     libffi-dev \
     libssl-dev \
     python-dev \
