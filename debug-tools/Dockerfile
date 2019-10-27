@@ -5,6 +5,7 @@ ENV TERM xterm
 
 RUN apt-get update && \
     apt-get install -Vy --no-install-recommends \
+    apache2-utils \
     ca-certificates \
     curl \
     dnsutils \
@@ -17,6 +18,7 @@ RUN apt-get update && \
     tzdata \
     vim \
     wget && \
+    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
     rm -rf /var/lib/apt/lists/*
 
 ENV LANG=C.UTF-8
