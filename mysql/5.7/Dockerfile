@@ -1,4 +1,4 @@
-FROM mysql:5.7.17
+FROM mysql:5.7.32
 
 MAINTAINER Vinta Chen <vinta.chen@gmail.com>
 
